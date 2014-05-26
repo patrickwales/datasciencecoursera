@@ -24,7 +24,6 @@ getPath <- function(directory, id){
   zeros = c("", "0", "00")
   id = as.character(id)
   correctid = paste(zeros[[4 - nchar(id)]], id, sep="")
-  print(correctid)
-  path = paste(directory, correctid, ".csv", sep="")
+  path = paste(directory, "/", correctid, ".csv", sep="")
   return(path)
 }
